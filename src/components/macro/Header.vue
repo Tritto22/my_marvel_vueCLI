@@ -20,10 +20,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    @import 'bootstrap';
-    @import '../../assets/style/partials/variables.scss';
+@import 'bootstrap';
+@import '../../assets/style/partials/variables.scss';
     header{
         background-color: $primary-bg-color-light;
-        color: $primary-txt-color-light;
     }
 </style>

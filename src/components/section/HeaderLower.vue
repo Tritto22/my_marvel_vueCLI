@@ -11,6 +11,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    @import '../../assets/style/partials/variables.scss';
+@import 'bootstrap';
+@import '../../assets/style/partials/variables.scss';
 
 </style>
