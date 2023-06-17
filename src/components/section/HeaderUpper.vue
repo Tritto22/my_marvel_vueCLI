@@ -1,19 +1,15 @@
 <template>
     <div class="header-upper">
-        <div class="container">
-            <div class="row">
-                <div class="col-2 p-0">
-                    <LogIn/>
-                </div>
-                <div class="col-7 p-0">
-                    <Home/>
-                </div>
-                <div class="col-2 p-0">
-                    <MarvelUnlimited/>
-                </div>
-                <div class="search">
-                    <Search/>
-                </div>
+        <div class="container-nav d-flex justify-content-between m-auto">
+            <div class="left-nav">
+                <LogIn/>
+            </div>
+            <div class="center-nav">
+                <Home/>
+            </div>
+            <div class="right-nav d-flex">
+                <MarvelUnlimited/>
+                <Search/>
             </div>
         </div>
     </div>
@@ -40,16 +36,10 @@ export default {
 @import 'bootstrap';
 @import '../../assets/style/partials/variables.scss';
     .header-upper{
-        border-bottom: 1px solid #2f2f2f;
-        .container{
-            padding: 0px 100px;
-            .row{
-                height: 100%;
-            }
-            .search{
-                width:50px;
-                padding: 0;
-            }
+        border-bottom: 1px solid #373737;
+        .container-nav{
+            height: 52px;
+            max-width: 1200px;
         }
     }
     

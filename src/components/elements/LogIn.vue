@@ -17,11 +17,13 @@ export default {
 @import 'bootstrap';
 @import '../../assets/style/partials/variables.scss';
     .log-in{
-        border: 1px solid #2f2f2f;
+        border-left: 1px solid #373737;
+        border-right: 1px solid #373737;
         display: flex;
         align-items: center;
         justify-content: center;
         height: 100%;
+        padding: 0 25px;
         cursor:pointer;
         img{
             width: 20px;

@@ -16,10 +16,12 @@ export default {
 @import 'bootstrap';
 @import '../../assets/style/partials/variables.scss';
 .search{
-    border: 1px solid #2f2f2f;
+    border-left: 1px solid #373737;
+    border-right: 1px solid #373737;
+    padding: 0 15px;
     a{
         color:$primary-txt-color-light;
-        font-size: 20px;
+        font-size: 16px;
     }
 }
 </style>

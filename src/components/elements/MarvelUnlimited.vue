@@ -22,10 +22,11 @@ export default {
         font-size: $lower-font-size;
     }
     .marvel-unlimited{
-        border: 1px solid #2f2f2f;
+        padding: 0 15px;
+        border-left: 1px solid #373737;
         img{
             height: 25px;
-            margin: 0 10px;
+            margin-right: 10px;
         }
         .description{
             line-height: 0.9;
