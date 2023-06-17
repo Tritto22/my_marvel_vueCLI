@@ -15,7 +15,6 @@ export default {
 <style lang="scss" scoped>
 @import 'bootstrap';
     .home{
-        border: 1px solid #373737;
         width: 130px;
         height: 52px;
         img{
