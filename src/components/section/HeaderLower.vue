@@ -49,7 +49,7 @@ export default {
           link: '#'
         }
       ]
-    };
+    }
   }
 }
   
@@ -66,7 +66,6 @@ export default {
         text-transform: uppercase;
         padding: 0 18px;
         cursor: pointer;
-        list-style: none;
         a{
           color: $primary-txt-color-light;
           font-size: $lower-font-size;
