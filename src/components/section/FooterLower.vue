@@ -20,5 +20,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../assets/style/partials/variables.scss';
 
+ul{
+    display: flex;
+    li{
+        text-decoration: none;
+        a{
+            color: $primary-txt-color-light;
+        }
+    }
+}
 </style>
