@@ -85,13 +85,13 @@ export default {
             linksPro: [
                 {
                     name: 'marvel insider',
-                    path: '../../assets/img/marvel_insider_logo.png',
+                    path: require('../../assets/img/marvel_insider_logo.png'),
                     info: 'Get Rewarded for Being a Marvel Fan',
                     link: '#'
                 },
                 {
                     name: 'marvel unlimited',
-                    path: '../../assets/img/marvel_unlimited_logo.png',
+                    path: require('../../assets/img/marvel_unlimited_logo.png'),
                     info: 'Access Over 30,000+ Digital Comics',
                     link: '#'
                 }
@@ -149,6 +149,10 @@ export default {
                 font-size: 13px;
                 .logo{
                     width: 60px;
+                    img{
+                        object-fit: contain;
+                        height: 40px;
+                    }
                 }
                 .info{
                     padding-left: 30px;
@@ -167,9 +171,10 @@ export default {
                     margin-top: 20px;
                     font-size: 20px;
                     color: #767676;
-                }
-                .icon:hover{
-                    color: $primary-txt-color-light;
+                    cursor: pointer;
+                    &:hover{
+                        color: $primary-txt-color-light;
+                    }
                 }
             }
         }
