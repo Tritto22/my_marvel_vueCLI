@@ -18,7 +18,7 @@
         <div class="pro-links">
             <a v-for="(link, i) in linksPro" :key="i" :href="link.link" class="pro-link d-flex">
                 <div class="logo">
-                    <img :src="link.img" :alt="link.name" class="w-100">
+                    <img :src="link.path" :alt="link.name" class="w-100">
                 </div>
                 <div class="info g-0">
                     <h5 class="text-uppercase m-0">{{link.name}}</h5>
@@ -28,6 +28,15 @@
         </div>
         <div class="social">
             <h5 class="text-uppercase m-0">follow marvel</h5>
+            <div class="follow">
+                <font-awesome-icon :icon="['fab', 'facebook']" class="icon"/>
+                <font-awesome-icon :icon="['fab', 'twitter']" class="icon"/>
+                <font-awesome-icon :icon="['fab', 'instagram']" class="icon"/>
+                <font-awesome-icon :icon="['fab', 'tumblr']" class="icon"/>
+                <font-awesome-icon :icon="['fab', 'youtube']" class="icon"/>
+                <font-awesome-icon :icon="['fab', 'snapchat']" class="icon"/>
+                <font-awesome-icon :icon="['fab', 'pinterest']" class="icon"/>
+            </div>
         </div>
     </div>
 </template>
@@ -76,13 +85,13 @@ export default {
             linksPro: [
                 {
                     name: 'marvel insider',
-                    img: '../../assets/img/marvel_insider_logo.png',
+                    path: '../../assets/img/marvel_insider_logo.png',
                     info: 'Get Rewarded for Being a Marvel Fan',
                     link: '#'
                 },
                 {
                     name: 'marvel unlimited',
-                    img: '../../assets/img/marvel_unlimited_logo.png',
+                    path: '../../assets/img/marvel_unlimited_logo.png',
                     info: 'Access Over 30,000+ Digital Comics',
                     link: '#'
                 }
@@ -101,6 +110,7 @@ export default {
     }
     h5{
         font-size: 14px;
+        color: $primary-txt-color-light;
     }
     .container-nav{
         max-width: 1240px;
@@ -142,6 +152,18 @@ export default {
                     p{
                         color: #696969;
                     }
+                }
+            }
+        }
+        .social{
+            margin: 0 40px;
+            .follow{
+                margin-top: 10px;
+                .icon{
+                    width: calc(100% / 4);
+                    margin-top: 20px;
+                    font-size: 20px;
+                    color: #767676;
                 }
             }
         }
