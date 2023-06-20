@@ -55,17 +55,24 @@ export default {
 <style lang="scss" scoped>
 @import '../../assets/style/partials/variables.scss';
 
-ul{
+nav{
+    max-width: 1240px;
+    margin: auto;
+    ul{
     display: flex;
-    
-    li{
-        
-        a{
-            font-size: $lower-font-size;
-            color: #696969;
-        }
-        a:hover{
-            color: $primary-txt-color-light;
+    justify-content: center;
+    padding: 0 20px;
+        li{
+            
+            a{
+                font-size: $lower-font-size;
+                color: #696969;
+                padding: 0 10px;
+                margin-bottom: 10px;
+            }
+            a:hover{
+                color: $primary-txt-color-light;
+            }
         }
     }
 }

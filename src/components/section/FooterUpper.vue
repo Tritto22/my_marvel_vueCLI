@@ -137,6 +137,9 @@ export default {
             a{
                 font-size: 13px;
             }
+            a:hover{
+            color: #767676;
+        }
         }
         .pro-links{
             margin: 0 40px;
@@ -164,6 +167,9 @@ export default {
                     margin-top: 20px;
                     font-size: 20px;
                     color: #767676;
+                }
+                .icon:hover{
+                    color: $primary-txt-color-light;
                 }
             }
         }
