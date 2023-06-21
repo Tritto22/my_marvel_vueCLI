@@ -60,6 +60,8 @@ export default {
   .header-lower{
     max-width: 1200px;
     margin: auto;
+    padding-bottom: 10px;
+    padding-top: 5px;
     .nav{
       display: flex;
       justify-content: center;
@@ -77,7 +79,6 @@ export default {
       }
       
     }
-
   }
 
 </style>

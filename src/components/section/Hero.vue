@@ -1,16 +1,37 @@
 <template>
     <div class="slider position-relative">
-        <div class="hero" v-for="(hero,i) in slider" :key="i" :class="[((i == position) ? 'active' : 'disable'),(hero.name)]">
-            <div class="container-info w-50">
-                <img :src="hero.logo" :alt="(i != 1) ? hero.name : ''" :class="(i == 2 || i == 3) ? 'w_2' : 'w_1'">
+        <div class="header-hero d-flex justify-content-center align-items-center">
+            <a href="#" class="text-uppercase text-decoration-none">stream ant-man and the wasp: quantumania on</a>
+            <img src="../../assets/img/slider/logo_disney.png" alt="Disney logo">
+        </div>
+        <div 
+        v-for="(hero,i) in slider" :key="i" 
+        class="hero" :class="[((i == position) ? 'active' : 'disable'),(hero.name)]" 
+        @mouseover="stopAutoplay()" @mouseleave="autoplay()"
+        >
+            <div class="container-info">
+                <img 
+                :src="hero.logo" 
+                :alt="(i != 1) ? hero.name : ''" 
+                :class="(i == 2 || i == 3) ? 'w_2' : 'w_1'"
+                >
                 <h1 class="text-uppercase">{{ hero.titol }}</h1>
                 <p>{{ hero.description }}</p>
-                <button>learn more</button>
+                <button class="fw-bold text-uppercase border-0" :class="(i == 4) ? 'disable' : 'active'">learn more</button>
             </div>
         </div>
         <div class="container-argument d-flex w-100 position-absolute z-1 bottom-0 start-50 translate-middle-x">
             <ul>
-                <li v-for="(element,i) in slider" :key="i" class="fw-bold">{{ element.btn }}</li>
+                <li 
+                v-for="(element,i) in slider" :key="i" 
+                class="fw-bold" :class="(i == position) ? 'underline' : ''"
+                @click="select(i)"
+                >
+                    <div :class="(i == position) ? 'progress-bar' : ''"></div>
+                    <a href="#" class="text-decoration-none d-flex">
+                        {{ element.btn }}
+                    </a>
+                </li>
             </ul>
             <div class="social d-flex justify-content-center align-items-center">
                 <font-awesome-icon :icon="['fab', 'facebook']" class="icon"/>
@@ -95,14 +116,26 @@ export default {
     mounted() {
         this.autoplay()
     }
-    
 }
 </script>
 
 <style lang="scss" scoped>
 @import '../../assets/style/partials/variables.scss';
 @import 'bootstrap';
-
+.progress-bar {
+  width: 0;
+  height: 7px;
+  background-color: #e62429;
+  animation: progressAnimation 3s infinite;
+}
+@keyframes progressAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
 .active{
     display: block;
 }
@@ -111,23 +144,18 @@ export default {
 }
 .spider{
     background-image: url('../../assets/img/slider/hero_1.png');
-    background-position: center;
 }
 .lee{
     background-image: url('../../assets/img/slider/hero_2.png');
-    background-position: center;
 }
 .new{
     background-image: url('../../assets/img/slider/hero_3.png');
-    background-position: center;
 }
 .captain{
     background-image: url('../../assets/img/slider/hero_4.png');
-    background-position: center;
 }
 .avengers{
     background-image: url('../../assets/img/slider/hero_5.png');
-    background-position: center;
 }
 .w_1{
     width: 300px;
@@ -137,15 +165,35 @@ export default {
 }
 .slider{
     height: 450px;
+    .header-hero{
+        background-color: #151515;
+        a{
+            color: white;
+            font-size: 14px;
+        }
+        img{
+            width: 70px;
+        }
+    }
     .hero{
         width: 100%;
-        height: 420px;
+        height: 440px;
         clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        background-position: center;
         .container-info{
-            padding: 60px 150px;
-            // img{
-            //     width: 300px;
-            // }
+            padding: 20px 0 60px 150px;
+            color: white;
+            max-width: 830px;
+            button{
+                background-color: #e62429;
+                color: white;
+                font-size: 14px;
+                padding: 15px 35px;
+                clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
+                &:hover{
+                    background-color: #9f0013;
+                }
+            }
         }
     }
     .container-argument{
@@ -159,7 +207,13 @@ export default {
             li{
                 font-size: 14px;
                 width: 20%;
-                padding: 20px 30px 20px 20px;
+                
+                cursor: pointer;
+                a{
+                    color: black;
+                    font-size: 14px;
+                    padding: 12px 25px;
+                }
             }
         }
         .social{
