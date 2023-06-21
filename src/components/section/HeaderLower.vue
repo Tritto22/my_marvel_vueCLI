@@ -1,9 +1,9 @@
 <template>
   <div class="header-lower">
     <nav>
-      <ul class="navbar d-flex justify-content-center">
+      <ul class="nav">
         <li v-for="(link, i) in headerLowerLinks" :key="i">
-          <a :href="link.link" class="text-uppercase fw-bold text-decoration-none">{{link.name}}</a>
+          <a :href="link.link">{{link.name}}</a>
         </li>
       </ul>
     </nav>
@@ -56,12 +56,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import 'bootstrap';
 @import '../../assets/style/partials/variables.scss';
   .header-lower{
     max-width: 1200px;
     margin: auto;
-    .navbar{
+    .nav{
+      display: flex;
+      justify-content: center;
       li{
         text-transform: uppercase;
         padding: 0 18px;
@@ -69,6 +70,9 @@ export default {
         a{
           color: $primary-txt-color-light;
           font-size: $lower-font-size;
+          text-transform: uppercase;
+          font-weight: bold;
+          text-decoration: none;
         }
       }
       
