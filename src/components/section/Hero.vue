@@ -177,7 +177,7 @@ export default {
     }
     .hero{
         width: 100%;
-        height: 440px;
+        height: 390px;
         clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
         background-position: center;
         .container-info{
