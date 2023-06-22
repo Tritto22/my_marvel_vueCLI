@@ -7,7 +7,7 @@
                 <p>{{ section.description }}</p>
                 <button class="fw-bold text-uppercase border-0">learn more</button>
             </div>
-            <div class="articles d-flex position-absolute z-1 bottom-0 start-50 translate-middle-x w-100">
+            <div class="articles d-flex position-absolute z-1 start-50 translate-middle-x w-100">
                 <CardArticle v-for="(article,i) in section.articles" :key="i" :article="article"/>
             </div>
         </div>
@@ -100,6 +100,7 @@ section{
         max-width: 1179px;
         background-color: white;
         padding: 10px;
+        bottom: 1px;
     }
 }
 </style>

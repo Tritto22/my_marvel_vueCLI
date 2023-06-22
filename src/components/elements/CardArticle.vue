@@ -25,5 +25,18 @@ export default {
             object-fit: cover;
             width: 100%;
         }
+        h4{
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: bold;
+            color: #767676;
+            margin-top: 20px;
+        }
+        p{
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 8px;
+        }
     }
 </style>
