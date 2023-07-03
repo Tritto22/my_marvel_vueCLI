@@ -9,11 +9,14 @@ jobs:
     build-test-deploy:
         runs-on: ubuntu-latest
         steps:
-            -   name: Debug Git
-                run: |
-                    git config --list
-                    git remote -v
-                    git fetch --all
+            # -   name: Debug Git
+            #     run: |
+            #         git config --list
+            #         git remote -v
+            #         git fetch --all
+            -   name: Check Current Directory
+                run: pwd
+
             -   name: Checkout
                 uses: actions/checkout@v2
             -   name: Set-up Node
